@@ -62,15 +62,13 @@ export const Interface = () => {
 const AboutSection = () => {
   return (
     <Section>
-      <h1 className="text-8xl italic font-extrabold leading-snug stroke-cyan-700">
+      <h1 className="text-6xl italic font-extrabold leading-snug stroke-cyan-700">
         Hi, I'm
         <br />
-        <span className="px-5 italic text-indigo-600 bg-white bg-opacity-50 rounded-3xl p-1">
-          Adway
-        </span>
+        <span className="text-8xl italic text-[#ffd448]  ">Adway,</span>
       </h1>
       <motion.p
-        className="text-4xl font-bold mt-4"
+        className="text-3xl font-bold mt-4 bg-white bg-opacity-50 rounded-3xl px-2"
         initial={{
           opacity: 0,
           y: 25,
@@ -84,7 +82,7 @@ const AboutSection = () => {
           delay: 1.5,
         }}
       >
-        A Frontend Web Developer
+        A Frontend Web Developer.
       </motion.p>
       <a
         href="https://app.resumod.co/resume/r/65829153ffc61039c06c5ab0"
