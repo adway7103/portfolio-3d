@@ -12,14 +12,14 @@ const projects = [
     image: "/projects/mlsa.png",
     description:
       "As a Microsoft Student Learn Ambassador (MLSA) at KIIT, I had the opportunity to collaborate on the development of our community’s website. This project, built with Next.js, was a significant learning experience for me. I was responsible for the majority of the frontend development, which allowed me to deepen my understanding of various concepts and tools. This project is a testament to my ability to work in a team and my commitment to learning and growth.",
-    link: "https://www.mlsakiit.com/",
+    website: "https://www.mlsakiit.com/",
   },
   {
     title: "Portfolio Website",
     image: "projects/portfolio.png",
     description:
       "In my pursuit of exploring the intersection of creativity and technology, I developed my personal portfolio website using Three.js and react-three-fiber. This project showcases my ability to create interactive 3D elements and integrate them into a web interface, providing a unique and engaging user experience. The website serves as a comprehensive display of my technical skills, projects, and achievements. It stands as a testament to my proficiency in modern web technologies and my passion for creating visually appealing and immersive digital experiences.",
-    link: "https://www.mlsakiit.com/",
+    website: "https://adwaylachhiramka.vercel.app/",
   },
 ];
 const Section = (props) => {

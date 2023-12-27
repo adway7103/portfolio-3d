@@ -60,11 +60,17 @@ const Carousel = ({ projects }) => {
           className="absolute top-0 left-0 w-full h-full flex items-center justify-center p-8"
           onClick={() => setSelectedProject(projects[currentProjectIndex])}
         >
-          <img
-            className="max-h-full max-w-full rounded-lg cursor-pointer transform transition-transform duration-500 hover:scale-105"
-            src={projects[currentProjectIndex].image}
-            alt={projects[currentProjectIndex].title}
-          />
+          <a
+            href={projects[currentProjectIndex].website}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="max-h-full max-w-full rounded-lg cursor-pointer transform transition-transform duration-500 hover:scale-105"
+              src={projects[currentProjectIndex].image}
+              alt={projects[currentProjectIndex].title}
+            />
+          </a>
         </motion.div>
 
         <h2 className="absolute bottom-0 left-0 w-full text-center text-3xl font-bold p-4 bg-white bg-opacity-60">
@@ -87,36 +93,6 @@ const Carousel = ({ projects }) => {
           />
         ))}
       </div>
-
-      {selectedProject && (
-        <Dialog
-          open={selectedProject !== null}
-          onClose={() => setSelectedProject(null)}
-          className="fixed z-10 inset-0 overflow-y-auto"
-        >
-          <div className="flex items-center justify-center min-h-screen">
-            <Dialog.Overlay className="fixed inset-0" />
-            <div className="bg-white rounded-lg w-[40rem] mx-auto p-6 space-y-6">
-              <Dialog.Title className="text-2xl font-bold">
-                {" "}
-                {selectedProject.title}{" "}
-              </Dialog.Title>
-              <img
-                className="w-full h-64 object-cover rounded-lg"
-                src={selectedProject.image}
-                alt={selectedProject.title}
-              />
-              <p className="font-semibold">{selectedProject.description}</p>
-              <button
-                onClick={() => (window.location.href = selectedProject.link)}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              >
-                Go to Project
-              </button>
-            </div>
-          </div>
-        </Dialog>
-      )}
     </div>
   );
 };
