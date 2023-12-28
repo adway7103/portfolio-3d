@@ -4,6 +4,9 @@ import { Avatar } from "./Avatar";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 import { useAtom } from "jotai";
 import Carousel from "./Carousel";
 const projects = [
@@ -20,6 +23,21 @@ const projects = [
     description:
       "In my pursuit of exploring the intersection of creativity and technology, I developed my personal portfolio website using Three.js and react-three-fiber. This project showcases my ability to create interactive 3D elements and integrate them into a web interface, providing a unique and engaging user experience. The website serves as a comprehensive display of my technical skills, projects, and achievements. It stands as a testament to my proficiency in modern web technologies and my passion for creating visually appealing and immersive digital experiences.",
     website: "https://adwaylachhiramka.vercel.app/",
+  },
+  {
+    title: "Nike Website Replica",
+    image: "projects/nike.jpeg",
+    // description:
+    // "In my pursuit of exploring the intersection of creativity and technology, I developed my personal portfolio website using Three.js and react-three-fiber. This project showcases my ability to create interactive 3D elements and integrate them into a web interface, providing a unique and engaging user experience. The website serves as a comprehensive display of my technical skills, projects, and achievements. It stands as a testament to my proficiency in modern web technologies and my passion for creating visually appealing and immersive digital experiences.",
+    website: "https://nike-adway.vercel.app/",
+  },
+
+  {
+    title: "Old Portfolio Website",
+    image: "projects/port.jpeg",
+    // description:
+    // "In my pursuit of exploring the intersection of creativity and technology, I developed my personal portfolio website using Three.js and react-three-fiber. This project showcases my ability to create interactive 3D elements and integrate them into a web interface, providing a unique and engaging user experience. The website serves as a comprehensive display of my technical skills, projects, and achievements. It stands as a testament to my proficiency in modern web technologies and my passion for creating visually appealing and immersive digital experiences.",
+    website: "https://adway-lachhiramka.netlify.app/",
   },
 ];
 const Section = (props) => {
@@ -63,40 +81,52 @@ const AboutSection = () => {
   return (
     <Section>
       <h1 className="text-6xl italic font-extrabold leading-snug stroke-cyan-700">
-        Hi, I'm
-        <br />
-        <span className="text-8xl italic text-[#ffd448]  ">Adway,</span>
+        Hi, I'm <br />
+        <span className="text-8xl italic text-[#ffd448] ">Adway,</span>
       </h1>
       <motion.p
         className="text-3xl font-bold mt-4 bg-white bg-opacity-50 rounded-3xl px-2"
-        initial={{
-          opacity: 0,
-          y: 25,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 1,
-          delay: 1.5,
-        }}
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.5 }}
       >
         A Frontend Web Developer.
       </motion.p>
-      <a
-        href="https://app.resumod.co/resume/r/65829153ffc61039c06c5ab0"
-        target="_blank"
-      >
-        <motion.button
-          className={`bg-red-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16`}
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 2 }}
+      <div className="flex space-x-4 mt-16">
+        <a
+          href="https://app.resumod.co/resume/r/65829153ffc61039c06c5ab0"
+          target="_blank"
         >
-          My Resume
-        </motion.button>
-      </a>
+          <motion.button
+            className={`bg-red-600 text-white py-4 px-8 rounded-lg font-bold text-lg`}
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 2 }}
+          >
+            My Resume
+          </motion.button>
+        </a>
+        <a href="https://github.com/yourusername" target="_blank">
+          <motion.div
+            className="text-3xl"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 2.5 }}
+          >
+            <FaGithub />
+          </motion.div>
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">
+          <motion.div
+            className="text-3xl"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 3 }}
+          >
+            <FaLinkedin />
+          </motion.div>
+        </a>
+      </div>
     </Section>
   );
 };

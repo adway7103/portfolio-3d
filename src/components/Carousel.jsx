@@ -42,8 +42,8 @@ const Carousel = ({ projects }) => {
   }, [currentProjectIndex]);
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-6xl font-extrabold mb-8 text-blue-500">Projects</h1>
+    <div className="mt-4 w-full lg:h-screen h-[25rem] flex flex-col items-center justify-center bg-gray-100">
+      <h1 className="text-6xl font-extrabold mb-10 text-blue-500">Projects</h1>
       <div className="relative w-3/4 h-3/4 bg-white rounded-xl shadow-2xl overflow-hidden">
         <button
           className="absolute top-1/2 left-0 transform -translate-y-1/2 text-4xl font-bold p-4 text-blue-500"
