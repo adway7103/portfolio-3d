@@ -37,8 +37,8 @@ export const Experience = (props) => {
       <group rotation-y={Math.PI / 50}>
         <ambientLight intensity={1} />
         <motion.group
-          position={[0.8, 5, 3.4]}
-          scale={[0.9, 0.9, 0.9]}
+          position={[0.2, -1, 2.4]}
+          scale={[1, 1, 1]}
           rotation-y={-Math.PI / 6.5}
           animate={{
             y: section === 0 ? 0 : -1,
