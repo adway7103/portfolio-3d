@@ -79,69 +79,71 @@ export const Interface = () => {
 
 const AboutSection = () => {
   return (
-    <Section>
-      <h1 className="text-6xl italic font-extrabold leading-snug stroke-cyan-700">
-        Hi, I'm <br />
-        <span className="text-8xl italic text-[#ffd448] ">Adway,</span>
-      </h1>
-      <motion.p
-        className="text-3xl font-bold mt-4 bg-white bg-opacity-50 rounded-3xl px-2"
-        initial={{ opacity: 0, y: 25 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1.5 }}
-      >
-        A Frontend Web Developer.
-      </motion.p>
-      <div className="flex space-x-4 mt-16">
-        <a
-          href="https://app.resumod.co/resume/r/65829153ffc61039c06c5ab0"
-          target="_blank"
+    <div>
+      <Section>
+        <h1 className="text-6xl italic font-extrabold leading-snug stroke-cyan-700">
+          Hi, I'm <br />
+          <span className="text-8xl italic text-[#ffd448] ">Adway,</span>
+        </h1>
+        <motion.p
+          className="text-3xl font-bold mt-4 bg-white bg-opacity-50 rounded-3xl px-2"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.5 }}
         >
-          <motion.button
-            className={`bg-red-600 hover:bg-red-800 text-white py-4 px-8 rounded-lg font-bold text-lg`}
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 2 }}
+          A Frontend Web Developer.
+        </motion.p>
+        <div className="flex space-x-4 mt-16">
+          <a
+            href="https://app.resumod.co/resume/r/65829153ffc61039c06c5ab0"
+            target="_blank"
           >
-            My Resume
-          </motion.button>
-        </a>
-        <a href="https://github.com/adway7103" target="_blank">
-          <motion.div
-            className="text-6xl hover:text-[#ffffffcf] hover:bg-black rounded-full p-[1px]"
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 2.5 }}
+            <motion.button
+              className={`bg-red-600 hover:bg-red-800 text-white sm:py-4 py-4 sm:px-14 px-12 rounded-lg font-bold text-lg`}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 2 }}
+            >
+              Get my CV
+            </motion.button>
+          </a>
+          <a href="https://github.com/adway7103" target="_blank">
+            <motion.div
+              className="text-6xl hover:text-[#ffffffcf] hover:bg-black rounded-full p-[1px]"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 2.5 }}
+            >
+              <FaGithub />
+            </motion.div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/adway-lachhiramka-45ab791a9/"
+            target="_blank"
           >
-            <FaGithub />
-          </motion.div>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/adway-lachhiramka-45ab791a9/"
-          target="_blank"
-        >
-          <motion.div
-            className="text-6xl text-blue-600 hover:bg-white"
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 3 }}
-          >
-            <FaLinkedin />
-          </motion.div>
-        </a>
-      </div>
-    </Section>
+            <motion.div
+              className="text-6xl text-blue-600 hover:bg-white"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 3 }}
+            >
+              <FaLinkedin />
+            </motion.div>
+          </a>
+        </div>
+      </Section>
+    </div>
   );
 };
 
 const skills = [
   {
-    title: "React / React Native",
-    level: 90,
+    title: "React",
+    level: 80,
   },
   {
     title: "Nextjs",
-    level: 90,
+    level: 70,
   },
   {
     title: "Java",
@@ -161,7 +163,7 @@ const skills = [
   },
   {
     title: "3D Modeling",
-    level: 40,
+    level: 20,
   },
   {
     title: "Threejs / React Three Fiber",
@@ -181,84 +183,105 @@ const languages = [
 
 const SkillsSection = () => {
   return (
-    <Section>
-      <motion.div whileInView={"visible"}>
-        <div className="w-[80rem] lg:flex justify-between">
-          <div className="w-[30rem]">
-            <h2 className="text-6xl font-extrabold p-2 px-2">Skills</h2>
-            <div className=" mt-8 space-y-4">
-              {skills.map((skill, index) => (
-                <div className="w-64" key={index}>
-                  <motion.h3
-                    className="text-xl font-bold text-gray-800"
-                    initial={{
-                      opacity: 0,
-                    }}
-                    variants={{
-                      visible: {
-                        opacity: 1,
-                        transition: {
-                          duration: 1,
-                          delay: 1 + index * 0.2,
-                        },
-                      },
-                    }}
-                  >
-                    {skill.title}
-                  </motion.h3>
-                  <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
-                    <motion.div
-                      className="h-full bg-indigo-500 rounded-full "
-                      style={{ width: `${skill.level}%` }}
+    <div className="">
+      <Section>
+        <motion.div whileInView={"visible"}>
+          <div className="lg:flex  justify-around">
+            <div className="w-[30%]">
+              <h2 className="text-6xl font-extrabold p-2 px-2">Skills</h2>
+              <div className=" mt-8 space-y-4">
+                {skills.map((skill, index) => (
+                  <div className="w-64" key={index}>
+                    <motion.h3
+                      className="text-xl font-bold text-gray-800"
                       initial={{
-                        scaleX: 0,
-                        originX: 0,
+                        opacity: 0,
                       }}
                       variants={{
                         visible: {
-                          scaleX: 1,
+                          opacity: 1,
                           transition: {
                             duration: 1,
                             delay: 1 + index * 0.2,
                           },
                         },
                       }}
-                    />
+                    >
+                      {skill.title}
+                    </motion.h3>
+                    <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
+                      <motion.div
+                        className="h-full bg-indigo-500 rounded-full "
+                        style={{ width: `${skill.level}%` }}
+                        initial={{
+                          scaleX: 0,
+                          originX: 0,
+                        }}
+                        variants={{
+                          visible: {
+                            scaleX: 1,
+                            transition: {
+                              duration: 1,
+                              delay: 1 + index * 0.2,
+                            },
+                          },
+                        }}
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-          <div className="w-[50rem]">
-            <div className="text-6xl font-extrabold">About Me</div>
-            <motion.h3
-              className="text-xl font-bold text-gray-800"
-              initial={{
-                opacity: 0,
-              }}
-              variants={{
-                visible: {
-                  opacity: 1,
-                  transition: {
-                    duration: 1,
-                  },
-                },
-              }}
-            ></motion.h3>
-            <div></div>
+        </motion.div>
+      </Section>
+      <Section>
+        {" "}
+        <div className="ml-4">
+          <div className="text-6xl font-extrabold">About Me</div>
+          <motion.h3
+            className="text-xl font-bold text-gray-800"
+            initial={{ opacity: 0 }}
+            variants={{
+              visible: { opacity: 1, transition: { duration: 1 } },
+            }}
+          >
+            Passionate Software Developer
+          </motion.h3>
+          <div className="mt-4 md:text-lg text-md text-gray-600">
+            <div>
+              Hello! I'm a passionate frontend developer currently pursuing my
+              Bachelors in Technology(B.Tech) from Kalinga Institute of
+              Industrial Technology, Bhubaneshwar(KIIT). I am always eager to
+              learn more and improve my skills. I have a strong understanding of
+              modern JavaScript frameworks and libraries, and I love the
+              challenge of solving complex problems.
+            </div>
+            <p>
+              I have always followed a project making based learning path which
+              has helped me a lot in the journey of Web Development. Currently I
+              am learning Backend Development and I aspire to be a full-stack
+              Developer. I can adapt to any environment and learn things
+              quickly.
+            </p>
+            <p>
+              When I'm not coding, you'll find me exploring the great outdoors
+              or curled up with a good book. I believe in lifelong learning and
+              growth, and I'm excited to take on new and exciting challenges.
+            </p>
           </div>
         </div>
-      </motion.div>
-    </Section>
+      </Section>
+    </div>
   );
 };
 
 const ContactSection = () => {
   return (
-    <div className="flex justify-center align-middle flex-col">
+    <div className="flex justify-center align-middle flex-col mt-8 h-screen">
       <Section>
-        <h2 className="text-5xl font-bold justify-center">Contact me</h2>
-        <div className="mt-8 p-8 rounded-md bg-white w-96 max-w-full">
+        <h2 className="text-4xl font-bold justify-center">Contact me</h2>
+        <div className="mt-4 mb-2 p-8 rounded-md bg-white w-96 max-w-full">
           <form>
             <label for="name" className="font-medium text-gray-900 block mb-1">
               Name
@@ -292,7 +315,7 @@ const ContactSection = () => {
               id="message"
               className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
             />
-            <button className="bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 ">
+            <button className="bg-indigo-600 text-white py-2 px-8 rounded-lg font-bold text-lg mt-4 ">
               Submit
             </button>
           </form>
