@@ -49,7 +49,7 @@ export const Experience = (props) => {
             position={[-0.25, 0.25, -0.6]}
             rotation-y={Math.PI - Math.PI / 10}
           >
-            <Avatar animation={section === 0 ? "Typing" : "Falling"} />
+            <Avatar animation={section === 0 ? "Typing" : "Typing"} />
           </group>
           <Office section={section} />
         </motion.group>
