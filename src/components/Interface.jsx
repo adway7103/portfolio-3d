@@ -98,7 +98,7 @@ const AboutSection = () => {
           target="_blank"
         >
           <motion.button
-            className={`bg-red-600 text-white py-4 px-8 rounded-lg font-bold text-lg`}
+            className={`bg-red-600 hover:bg-red-800 text-white py-4 px-8 rounded-lg font-bold text-lg`}
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 2 }}
@@ -106,9 +106,9 @@ const AboutSection = () => {
             My Resume
           </motion.button>
         </a>
-        <a href="https://github.com/yourusername" target="_blank">
+        <a href="https://github.com/adway7103" target="_blank">
           <motion.div
-            className="text-3xl"
+            className="text-6xl hover:text-[#ffffffcf] hover:bg-black rounded-full p-[1px]"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 2.5 }}
@@ -116,9 +116,12 @@ const AboutSection = () => {
             <FaGithub />
           </motion.div>
         </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/adway-lachhiramka-45ab791a9/"
+          target="_blank"
+        >
           <motion.div
-            className="text-3xl"
+            className="text-6xl text-blue-600 hover:bg-white"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 3 }}
