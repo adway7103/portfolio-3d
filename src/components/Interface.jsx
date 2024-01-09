@@ -18,6 +18,13 @@ const projects = [
     website: "https://www.mlsakiit.com/",
   },
   {
+    title: "Agency Website",
+    image: "projects/stayon.png",
+    description:
+      "In my pursuit of exploring the intersection of creativity and technology, I developed my personal portfolio website using Three.js and react-three-fiber. This project showcases my ability to create interactive 3D elements and integrate them into a web interface, providing a unique and engaging user experience. The website serves as a comprehensive display of my technical skills, projects, and achievements. It stands as a testament to my proficiency in modern web technologies and my passion for creating visually appealing and immersive digital experiences.",
+    website: "https://stay-on.vercel.app/",
+  },
+  {
     title: "Portfolio Website",
     image: "projects/portfolio.png",
     description:
