@@ -102,7 +102,7 @@ const AboutSection = () => {
         </motion.p>
         <div className="flex space-x-4 mt-16">
           <a
-            href="https://app.resumod.co/resume/r/65829153ffc61039c06c5ab0"
+            href="https://drive.google.com/file/d/1axyOezMnmHj3SzzjK0PFDdRRCyGhMnmH/view?usp=drive_link"
             target="_blank"
           >
             <motion.button
